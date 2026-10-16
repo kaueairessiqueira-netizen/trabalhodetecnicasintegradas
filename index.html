@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGEE - Painel do Aluno</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1a365d;
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    .user-info {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: #2c5282;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-details {
+      margin: 1rem 0;
+      font-size: 0.85rem;
+      color: #718096;
+    }
+
+    .btn-submit {
+      background-color: #3182ce;
+      color: #ffffff;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s;
+    }
+
+    .btn-submit:hover {
+      background-color: #2b6cb0;
+    }
+
+    footer {
+      background-color: #2d3748;
+      color: #a0aec0;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SGEE - Sistema de Gestão de Eventos Escolares</h1>
+    <div class="user-info">Bem-vindo(a), <strong>Aluno(a)</strong></div>
+  </header>
+
+  <main>
+    <h2 class="section-title">Próximos Eventos</h2>
+
+    <div class="events-grid">
+      <div class="card">
+        <div>
+          <h3>Oficina de Inteligência Artificial</h3>
+          <p>Aprenda a utilizar ferramentas generativas no desenvolvimento de software e análise de requisitos.</p>
+          <div class="event-details">
+            <p>🗓️ <strong>Data:</strong> 25/11/2026</p>
+            <p>📍 <strong>Local:</strong> Laboratório 03</p>
+            <p>🎟️ <strong>Vagas restantes:</strong> 8</p>
+          </div>
+        </div>
+        <button class="btn-submit">Inscrever-se</button>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Palestra: Metodologias Ágeis no Mercado</h3>
+          <p>Descubra como o Scrum e o Kanban são aplicados nas principais empresas de tecnologia.</p>
+          <div class="event-details">
+            <p>🗓️ <strong>Data:</strong> 02/12/2026</p>
+            <p>📍 <strong>Local:</strong> Auditório Principal</p>
+            <p>🎟️ <strong>Vagas restantes:</strong> 25</p>
+          </div>
+        </div>
+        <button class="btn-submit">Inscrever-se</button>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Mini-Curso de HTML5 e CSS3</h3>
+          <p>Crie protótipos modernos e responsivos do zero em poucas horas.</p>
+          <div class="event-details">
+            <p>🗓️ <strong>Data:</strong> 10/12/2026</p>
+            <p>📍 <strong>Local:</strong> Laboratório 01</p>
+            <p>🎟️ <strong>Vagas restantes:</strong> 2</p>
+          </div>
+        </div>
+        <button class="btn-submit">Inscrever-se</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Escola Técnica - Sistema de Gestão de Eventos Escolares. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
